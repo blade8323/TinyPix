@@ -10,15 +10,25 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var pixView: TinyPixView!
+    
 
-
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UserDefaults.didChangeNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let doc = detailItem as? UIDocument {
+            doc.close(completionHandler: nil)
+        }
+    }
+    
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
+        if detailItem != nil && isViewLoaded {
+            pixView.document = detailItem! as! TinyPixDocument
+            pixView.setNeedsDisplay()
         }
     }
 
@@ -26,15 +36,27 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureView()
+        updateTintColor()
+        NotificationCenter.default.addObserver(self, selector: #selector(onSettingsChanged(notification:)), name: UserDefaults.didChangeNotification, object: nil)
+    }
+    
+    @objc func onSettingsChanged(notification: Notification) {
+        updateTintColor()
     }
 
-    var detailItem: NSDate? {
+    var detailItem: AnyObject? {
         didSet {
             // Update the view.
             configureView()
         }
     }
-
-
+    
+    private func updateTintColor() {
+        let prefs = UserDefaults.standard
+        let selectedColorIndex = prefs.integer(forKey: "selectedColorIndex")
+        let tintColor = TinyPixUtils.getTintColorForIndex(index: selectedColorIndex)
+        pixView.tintColor = tintColor
+        pixView.setNeedsDisplay()
+    }
 }
 

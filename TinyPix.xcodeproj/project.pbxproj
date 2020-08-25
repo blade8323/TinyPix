@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8449ACF024F3CDD400422BC0 /* TinyPixUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449ACEF24F3CDD400422BC0 /* TinyPixUtils.swift */; };
+		8449ACF224F3F0DC00422BC0 /* TinyPixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449ACF124F3F0DC00422BC0 /* TinyPixView.swift */; };
 		844AC41124EEB7F9009D9C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844AC41024EEB7F9009D9C56 /* AppDelegate.swift */; };
 		844AC41324EEB7F9009D9C56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844AC41224EEB7F9009D9C56 /* SceneDelegate.swift */; };
 		844AC41524EEB7F9009D9C56 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844AC41424EEB7F9009D9C56 /* MasterViewController.swift */; };
@@ -14,9 +16,12 @@
 		844AC41A24EEB7F9009D9C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844AC41824EEB7F9009D9C56 /* Main.storyboard */; };
 		844AC41C24EEB7FB009D9C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844AC41B24EEB7FB009D9C56 /* Assets.xcassets */; };
 		844AC41F24EEB7FB009D9C56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844AC41D24EEB7FB009D9C56 /* LaunchScreen.storyboard */; };
+		844AC42724EEB844009D9C56 /* TinyPixDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844AC42624EEB844009D9C56 /* TinyPixDocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8449ACEF24F3CDD400422BC0 /* TinyPixUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyPixUtils.swift; sourceTree = "<group>"; };
+		8449ACF124F3F0DC00422BC0 /* TinyPixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyPixView.swift; sourceTree = "<group>"; };
 		844AC40D24EEB7F9009D9C56 /* TinyPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844AC41024EEB7F9009D9C56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844AC41224EEB7F9009D9C56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		844AC41B24EEB7FB009D9C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844AC41E24EEB7FB009D9C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844AC42024EEB7FB009D9C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844AC42624EEB844009D9C56 /* TinyPixDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyPixDocument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +67,11 @@
 				844AC41024EEB7F9009D9C56 /* AppDelegate.swift */,
 				844AC41224EEB7F9009D9C56 /* SceneDelegate.swift */,
 				844AC41424EEB7F9009D9C56 /* MasterViewController.swift */,
+				8449ACEF24F3CDD400422BC0 /* TinyPixUtils.swift */,
 				844AC41624EEB7F9009D9C56 /* DetailViewController.swift */,
+				844AC42624EEB844009D9C56 /* TinyPixDocument.swift */,
 				844AC41824EEB7F9009D9C56 /* Main.storyboard */,
+				8449ACF124F3F0DC00422BC0 /* TinyPixView.swift */,
 				844AC41B24EEB7FB009D9C56 /* Assets.xcassets */,
 				844AC41D24EEB7FB009D9C56 /* LaunchScreen.storyboard */,
 				844AC42024EEB7FB009D9C56 /* Info.plist */,
@@ -142,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				844AC41124EEB7F9009D9C56 /* AppDelegate.swift in Sources */,
+				844AC42724EEB844009D9C56 /* TinyPixDocument.swift in Sources */,
+				8449ACF224F3F0DC00422BC0 /* TinyPixView.swift in Sources */,
 				844AC41324EEB7F9009D9C56 /* SceneDelegate.swift in Sources */,
+				8449ACF024F3CDD400422BC0 /* TinyPixUtils.swift in Sources */,
 				844AC41524EEB7F9009D9C56 /* MasterViewController.swift in Sources */,
 				844AC41724EEB7F9009D9C56 /* DetailViewController.swift in Sources */,
 			);
